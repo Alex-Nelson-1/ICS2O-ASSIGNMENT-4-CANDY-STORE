@@ -60,38 +60,42 @@
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
       <header class="mdl-layout__header">
         <div class="mdl-layout__header-row">
-          <span class="mdl-layout-title">Discount Eligibility</span>
+          <span class="mdl-layout-title">Candy Store Options</span>
         </div>
       </header>
       <main class="mdl-layout__content">
-        <!-- Explination -->
-        <h5>
-          Students between the age of 13 and 20 get a student discount on Monday
-          and Tuesday. Please select a day and your age to see if you are
-          eligible for a student discount.
-        </h5>
-        <!-- Textfield code -->
-        <form action="#">
-          Age:
-          <div class="mdl-textfield mdl-js-textfield">
-            <input
-              class="mdl-textfield__input"
-              type="text"
-              pattern="-?[0-9]*(\.[0-9]+)?"
-              id="age"
-            />
-            <!--This will control the textfields error message and label-->
-            <label class="mdl-textfield__label" for="age">Age</label>
-            <span class="mdl-textfield__error">Numbers Only!</span>
-          </div>
-        </form>
-        <!-- Raised button with ripple and JS function -->
-        <button
-          class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
-          onclick="TEST()"
-        >
-          TEST
-        </button>
+        <!-- Code for the selector -->
+        <label for="day">Choose a day of the week:</label>
+      <form name="candy-type">
+        <select name="type" size="1" id="candy-type" onchange="candyType()">
+          <option value="lolipops">Lolipops</option>
+          <option value="gum">Gum</option>
+          <option value="chewy-candy">Chewy Candy</option>
+          <option value="candy-bars">Candy bars</option>
+          <option value="hard-candy">Hard Candy</option>
+        </select>
+      </form>
+        
+      <form name=lolipopBrand>
+        <select name="brand" size="1" id="candy-brand">
+          <option value="tootsie">Tootsie Pops</option>
+          <option value="whirly-pops">Whirly Pops</option>
+          <option value="chupa-chups">Chupa Chups</option>
+          <option value="original-gourmets">Original Gourmets</option>
+          <option value="candy-bars">Push Pops</option>
+          <option value="hard-candy">Ring Pops</option>
+          <option value="blow-pops">Blow Pops</option>
+        </select>
+      </form>
+        
+      <form name=candySize>
+        <select name="size" size="1" id="candy-size">
+          <option value="small">Small</option>
+          <option value="regular">Regular</option>
+          <option value="large">Large</option>
+          <option value="extra-large">Extra Large</option>
+        </select>
+      </form>
         <div id="output"></div>
       </main>
     </div>

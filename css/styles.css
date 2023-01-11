@@ -42,3 +42,9 @@ img {
   float: right;
   margin-right: 15px;
 }
+
+/* selectors go to the left */
+select {
+  float: left;
+}
+
