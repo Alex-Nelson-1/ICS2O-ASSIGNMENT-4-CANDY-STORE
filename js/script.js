@@ -31,28 +31,6 @@ let candyType = document.getElementById("candy-type").value
     document.lollipopBrand.brand.options[5]=new Option("Ring Pops", "ring-pops", false, false)
     document.lollipopBrand.brand.options[6]=new Option("Blow Pops", "blow-pops", false, false)
   }
-    
-// Changes the brand options to gum brands
-else if (candyType == "gum") {
-document.lollipopBrand.brand.options[0]=new Option("Hubba Bubba", "hubba-bubba", true, false)
-document.lollipopBrand.brand.options[1]=new Option("Excel Gum", "excel", false, false)
-document.lollipopBrand.brand.options[2]=new Option("Juicy Fruit", "juicy-fruit", false, false)
-document.lollipopBrand.brand.options[3]=new Option("Dentyne", "dentyne", false, false)
-document.lollipopBrand.brand.options[4]=new Option("Double Bubble", "double-bubble", false, false)
-document.lollipopBrand.brand.options[5]=new Option("Trident", "trident", false, false)
-document.lollipopBrand.brand.options[6]=new Option("Extra Gum", "extra-gum", false, false)
-  }
-
-// Changes the brand options to chewy candy brands
-else if (candyType == "chewy-candy") {
-document.lollipopBrand.brand.options[0]=new Option("Starburst", "starburst", true, false)
-document.lollipopBrand.brand.options[1]=new Option("Mike and Ikes", "mike-ikes", false, false)
-document.lollipopBrand.brand.options[2]=new Option("Maynards", "skittles", false, false)
-document.lollipopBrand.brand.options[3]=new Option("Airheads", "airheads", false, false)
-document.lollipopBrand.brand.options[4]=new Option("Laffy Taffy", "laffy-taffy", false, false)
-document.lollipopBrand.brand.options[5]=new Option("Trolli", "trolli", false, false)
-document.lollipopBrand.brand.options[6]=new Option("Hi-Chew", "hi-chew", false, false)
-  }
 
 // Changes the brand options to candy bar brands
 else if (candyType == "candy-bars") {
@@ -89,11 +67,8 @@ function price() {
 //All price variables 
   var price = 0
   const LOLLIPOPPRICE = 0.80
-  const GUMPRICE = 0.30
-  const CHEWYPRICE = 0.60
   const HARDPRICE = 0.60
   const BARPRICE = 1.5
-  const SMALL = 0.75
   const REGULAR = 1
   const LARGE = 1.5
   const EXTRA = 2
@@ -101,18 +76,6 @@ function price() {
 //Lollipop price
   if (candyType == "lollipops") {
     price = LOLLIPOPPRICE
-    console.log(price)
-  }
-    
-//Gum price
-  else if (candyType == "gum") {
-    price = GUMPRICE
-    console.log(price)
-  }
-    
-//Chewy candy price
-  else if (candyType == "chewy-candy") {
-    price = CHEWYPRICE
     console.log(price)
   }
 
@@ -126,16 +89,10 @@ function price() {
   else {
     price = HARDPRICE
     console.log(price)
-  }
-
-//Multiplier if the size is small
-  if (candySize == "small") {
-    price = price * SMALL
-    console.log(price)
-  }   
+  } 
     
 //Multiplier if the size is large
-  else if (candySize == "large") {
+  if (candySize == "large") {
     price = price * LARGE
     console.log(price)
   }
