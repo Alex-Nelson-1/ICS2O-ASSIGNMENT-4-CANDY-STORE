@@ -1,5 +1,5 @@
 /* Created by: Alex Nelson
-* Created on: Dec 2022
+* Created on: Jan 2022
 * This file contains the CSS for index.html
 */
 
@@ -9,7 +9,7 @@
   justify-content: center;
 }
 
-/* All elements stay slightly away frome the side */
+/* All elements stay slightly away frome the edge */
 .mdl-layout__content {
   padding-left: 15pt;
   padding-right: 15pt;
@@ -37,14 +37,13 @@ p {
   padding-top: 15pt;
 }
 
-/* Images go to the right */
-img {
-  float: right;
-  margin-right: 15px;
-}
-
 /* selectors go to the left */
 select {
   float: left;
 }
 
+/* the lists go side by side */
+.list {
+  padding-left: 4px;
+  display: inline-block;
+}
